@@ -1,1 +1,30 @@
+import "core/color"
 
+def main() do 
+	# rgb list
+	paint_collection = [
+		[255, 0, 0],
+		[0, 128, 0],
+		[0, 0, 255],
+		[255, 255, 0],
+		[255, 165, 0],
+		[128, 0, 128],
+		[0, 255, 255],
+		[255, 192, 203],
+		[255, 255, 255],
+		[255, 0, 255],
+		[255, 105, 180],
+		[255, 215, 0],
+		[255, 51, 204],
+		[255, 28, 88],
+	]
+	when true do 
+		for color = paint_collection do 
+			"Happy New Year 2026"
+				:color::foreground(color)
+				:print("\r")
+			stdout_flush()
+			sleep(200) 
+		end
+	end
+end 
