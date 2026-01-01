@@ -1,0 +1,19 @@
+def add_me(a,b) do
+  println(a+b)
+end
+def add_me_2(a,b=10) do
+  println(a+b)
+end
+
+# pub means public
+# if any script tried to import this function and the function is not in public mode then its runtime error
+pub def add_me_3(a,b) do
+  return a+b
+end
+
+def main() do
+  add_me(10,20)
+  add_me_2(20)
+  # u can chain function call using plug opertor
+  add_me_3(b=10,a=20+40):println()
+end

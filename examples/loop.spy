@@ -1,0 +1,40 @@
+def main() do
+  n=0
+  range=get("enter some no "):int()
+  # while loop
+  when n<range do
+    println(n)
+    n=n+1
+  end
+
+  println("*"*5,"For loop","*"*5)
+
+  for i =range(10) do
+    println(i)
+  end
+
+  println("*"*10)
+
+  for i = [1,2,3] do
+    print(i)
+  end
+
+  println("*"*10)
+
+  for i = "hello" do
+    println(i)
+  end
+
+
+  println("*"*10)
+
+  # here i and j takes respective positional list element
+  # and started iterating respectively
+  # loop break if anyone of the element iteration is over
+  # in this example for loop stop after 2nd iteration
+  for i,j = [[10,20,30],[30,40]] do
+    println(i,j)
+  end
+
+
+end

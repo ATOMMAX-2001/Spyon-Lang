@@ -1,0 +1,39 @@
+def check(n) do
+  println(n)
+end
+
+def check_message(n,send_pid) do
+  # send needs 2 argument
+  # to which agent we need to send the data
+  # and the data itself
+  send(send_pid,n)
+end
+
+def main() do
+  for i = range(10) do
+    # it spawn multiple agent and return pid for that agent and do their task respectively
+    # spawn lifetime is main lifetime
+    # if main function return spawn function will close
+    # spawn will run on cpu core
+    pid = spawn("check",[i])
+  end
+  sleep(100)
+
+  println("*"*10)
+
+  pid = "get_my_message":spawn([])
+  for i = range(10) do
+    "check_message":spawn([i,pid])
+  end
+  sleep(100)
+end
+
+
+def get_my_message() do
+  when true do
+     message = recv()
+     if not message:is_none() do
+       println("RECV",message)
+     end
+  end
+end

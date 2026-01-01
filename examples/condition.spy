@@ -1,0 +1,31 @@
+def main() do
+  age = get("Enter ur age: "):int()
+
+  # each if condition can only have 1 end
+  # no matter how many elif  or else
+
+  # Simple if
+  if age>=18 do
+      println("can vote")
+  end
+
+  # Simple Else
+  if age>=18 do
+      println("can vote")
+  else do
+      println("cant vote")
+  end
+
+
+  # Simple Elif Else
+
+  if age <18 do
+      println("cant vote minor")
+  elif age>=20 do
+      println(">20 and can vote")
+  else do
+      println("cant vote") #this line wont even execute coz it satisfy elif
+  end
+
+
+end
