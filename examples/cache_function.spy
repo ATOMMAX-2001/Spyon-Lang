@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby -> syntax higlight
 
-
+# adding cache keyword before def tells spyon to cache the function result
+# very much useful during recursion eg: fibonacci
 cache def add_me(a,b) do
   # assume there is lot going here for 3 sec
 	sleep(3000)

@@ -12,6 +12,18 @@ def check_message(n,send_pid) do
   send(send_pid,n)
 end
 
+def get_my_message() do
+  when true do
+  # recv will return 1 object at a time
+  # if no message received then it will send nil its non-blocking function
+     message = recv()
+     if not message:is_none() do
+       println("RECV",message)
+     end
+  end
+end
+
+
 def main() do
   for i = range(10) do
     # it spawn multiple agent and return pid for that agent and do their task respectively
@@ -26,17 +38,8 @@ def main() do
 
   pid = "get_my_message":spawn([])
   for i = range(10) do
+    # check_message() have 2 arguments
     "check_message":spawn([i,pid])
   end
   sleep(100)
-end
-
-
-def get_my_message() do
-  when true do
-     message = recv()
-     if not message:is_none() do
-       println("RECV",message)
-     end
-  end
 end

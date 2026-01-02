@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby -> syntax higlight
+
+def some_functions(n) do
+  if n==5 do
+    return n+n
+  end
+  return error("Invalid Value, Need 5")
+end
+
+def some_functions_2(n) do
+  if n==5 do return some(n+n) end
+  return nil
+end
+
+def some_functions_3(n) do
+  if n==5 do return some(n+n) end
+  return some(nil)
+end
+
+def main() do
+  some_functions(5):unwrap():println() # -> this will print 10
+  some_functions(10):unwrap():println() # -> Unwrap Runtime Error
+
+  # unwrap_err() will return nil if there is no error otherwise the error object itself
+  some_functions(10):unwrap_err():println()
+
+  result = some_functions(10)
+    if result:is_error() do
+      # handle error here
+      result:unwrap_err():println("<- Found Error")
+    end
+      println(result:unwrap(),"<- Found Result")
+
+
+    # NOTE: unwrap cant able to unwrap nil which will result runtime error
+    # if u need to return nil then pass it like some(nil)
+
+    some_functions_2(10):unwrap() # <- this will raise error
+    some_functions_3(10):unwrap() # this will return nil
+end

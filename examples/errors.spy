@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby -> syntax higlight
+
+
+def main() do
+
+  # u can create custom error by using error()
+  # first argument is Error Name itself or error Id.
+  # second argument is error description, U describe ur error
+  error_obj = error("Error Name","Error Description")
+
+  # raise the error and return the agent/process
+  raise(error_obj)
+
+  # This is same as above
+  # only difference is, here "Error Name" will "Runtime Error"
+  error("Some Custom Error"):raise()
+end

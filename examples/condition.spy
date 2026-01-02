@@ -12,7 +12,7 @@ def main() do
       println("can vote")
   end
 
-  # Simple Else
+  # Simple If-Else
   if age>=18 do
       println("can vote")
   else do
@@ -20,15 +20,14 @@ def main() do
   end
 
 
-  # Simple Elif Else
+  # Simple If-Elif-Else
 
   if age <18 do
-      println("cant vote minor")
-  elif age>=20 do
-      println(">20 and can vote")
+      println("Minor")
+  elif age <= 65 do
+      println("Adult")
   else do
-      println("cant vote") #this line wont even execute coz it satisfy elif
+      println("Senior")
   end
-
 
 end

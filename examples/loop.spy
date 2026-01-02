@@ -11,18 +11,27 @@ def main() do
 
   println("*"*5,"For loop","*"*5)
 
+  # for loop with range
+  # range can have optional argument like range(start,end)
+  # or
+  # range(end)-> start from 0
+
   for i =range(10) do
     println(i)
   end
 
   println("*"*10)
 
+  # for loop using list
+  # i hold each element
   for i = [1,2,3] do
     print(i)
   end
 
   println("*"*10)
 
+  # for loop using string
+  # i hold each char
   for i = "hello" do
     println(i)
   end

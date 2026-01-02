@@ -3,6 +3,8 @@
 def add_me(a,b) do
   println(a+b)
 end
+# b=10 is default arugment.
+# during function call if b value is not passed then b will hold 10
 def add_me_2(a,b=10) do
   println(a+b)
 end
@@ -16,6 +18,16 @@ end
 def main() do
   add_me(10,20)
   add_me_2(20)
-  # u can chain function call using plug opertor
+  # u can chain function call using plug opertor [:]
   add_me_3(b=10,a=20+40):println()
+
+
+  # u can pass function as argument by using @ as prefix
+  function_object = @add_me()
+  # if u print function_object
+  # it will return Fn<add_me>
+  # NOTE: u can only pass argument as positional arguments for function object
+  #  function_object(10,b=20) -> wrong
+  #  function_object(10,20) -> correct
+  function_object:print()
 end
