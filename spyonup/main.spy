@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby -> syntax higlight
+
 import "core/color"
 import "core/request"
 import "core/file"
