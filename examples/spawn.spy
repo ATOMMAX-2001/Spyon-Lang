@@ -1,3 +1,7 @@
+#!/usr/bin/env ruby
+#just for ruby color ive added above line spyon think that as comment
+
+
 def check(n) do
   println(n)
 end
