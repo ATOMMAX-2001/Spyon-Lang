@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby -> syntax higlight
+
 def main() do
   n=0
   range=get("enter some no "):int()

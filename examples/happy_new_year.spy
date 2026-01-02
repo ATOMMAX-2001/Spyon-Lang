@@ -1,6 +1,8 @@
+#!/usr/bin/env ruby -> syntax higlight
+
 import "core/color"
 
-def main() do 
+def main() do
 	# rgb list
 	paint_collection = [
 		[255, 0, 0],
@@ -18,13 +20,13 @@ def main() do
 		[255, 51, 204],
 		[255, 28, 88],
 	]
-	when true do 
-		for color = paint_collection do 
+	when true do
+		for color = paint_collection do
 			"Happy New Year 2026"
 				:color::foreground(color)
 				:print("\r")
 			stdout_flush()
-			sleep(200) 
+			sleep(200)
 		end
 	end
-end 
+end

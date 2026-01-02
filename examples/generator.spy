@@ -1,18 +1,20 @@
-gen def give_me_something() do 
-	for i = range(5) do 
+#!/usr/bin/env ruby -> syntax higlight
+
+gen def give_me_something() do
+	for i = range(5) do
 		emit i
 	end
 	return "Done.."
 end
 
-def main() do 
-	for i= range(5) do 
+def main() do
+	for i= range(5) do
 		# generator function will return 2 values [result: any, did_function_returned: bool]
 		give_me_something()[0]:println()
 	end
 	give_me_something():println()
 
-	# calling generator function again 
+	# calling generator function again
 	# will start from first
 	give_me_something()[0]:println()
-end 
+end

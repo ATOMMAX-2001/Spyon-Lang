@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby -> syntax higlight
+
 def add_me(a,b) do
   println(a+b)
 end

@@ -1,5 +1,4 @@
-#!/usr/bin/env ruby
-#just for ruby color ive added above line spyon think that as comment
+#!/usr/bin/env ruby -> syntax higlight
 
 
 def main() do
